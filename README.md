@@ -1,6 +1,6 @@
 # docker-frontail
 
-Docker image (~66MB) for (frontail)[https://github.com/mthenw/frontail].
+Docker image (~66MB) for [frontail](https://github.com/mthenw/frontail).
 
 ## Usage
 
