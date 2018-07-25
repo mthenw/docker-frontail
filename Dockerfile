@@ -1,9 +1,10 @@
 FROM mhart/alpine-node:6.14.2
 
-RUN apk update && apk upgrade && apk add --no-cache git
+RUN apk --no-cache upgrade && apk add --no-cache git
+RUN npm install frontail@4.2.0 --global --production
 
-RUN npm install frontail@4.2.0 --global
+COPY docker-entrypoint.sh /
 
-ENTRYPOINT ["frontail"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 EXPOSE 9001
 CMD ["--help"]
